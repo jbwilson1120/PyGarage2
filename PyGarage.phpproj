@@ -1,0 +1,11 @@
+<Project Sdk="Devsense.Php.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>9d81707e-c8f7-3a4f-7c0e-e5d7702096f4</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnvName>PHPDev</EnvName>
+    <RuntimeVersion>8.4</RuntimeVersion>
+    <RootNamespace>PyGarage</RootNamespace>
+    <WebRoot />
+  </PropertyGroup>
+</Project>

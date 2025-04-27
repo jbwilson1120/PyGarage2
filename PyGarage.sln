@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "PyGarage", "PyGarage.phpproj", "{9D81707E-C8F7-3A4F-7C0E-E5D7702096F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D81707E-C8F7-3A4F-7C0E-E5D7702096F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D81707E-C8F7-3A4F-7C0E-E5D7702096F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D81707E-C8F7-3A4F-7C0E-E5D7702096F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D81707E-C8F7-3A4F-7C0E-E5D7702096F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DAA0A2D-447E-4760-BC93-DE7B21624CBC}
+	EndGlobalSection
+EndGlobal

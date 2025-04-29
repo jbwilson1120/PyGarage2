@@ -1,5 +1,7 @@
 <?php
 echo 'Hello World!';
+echo '</br>Loading Garage doors...';
+
 require_once 'config.php';      //Main settings
 require_once 'pinconfig.php';   //Pin mapping
 require_once 'GarageDoor.php';  //Main Garage Door class

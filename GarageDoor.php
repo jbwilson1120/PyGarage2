@@ -46,13 +46,13 @@ class GarageDoor
     }
 
     public function GetState(){
-        if $this->OpenSensor->getValue() == 1){
+        /*if $this->OpenSensor->getValue() == 1){
             return = 'Open';
         } elseif ($this->ClosedSensor->getValue() == 1){
             return = 'Closed';
         } else {
             return = 'Unknown';
         }
-        $this->state;
+        $this->state;*/
     }
 }

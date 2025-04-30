@@ -9,11 +9,12 @@ use PiPHP\GPIO\Pin\Pin;
 use PiPHP\GPIO\Pin\InputPin;
 use PiPHP\GPIO\Pin\OutputPin;
 
+require_once 'GPIOInterface.php';
 final class GPIO implements GPIOInterface
 {
     private $fileSystem;
     private $streamSelect;
-
+    
     /**
      * Constructor.
      *
@@ -40,7 +41,7 @@ final class GPIO implements GPIOInterface
     public function getOutputPin($number, $exportDirection = Pin::DIRECTION_OUT)
     {
         if ($exportDirection !== Pin::DIRECTION_OUT && $exportDirection !== Pin::DIRECTION_LOW && $exportDirection !== Pin::DIRECTION_HIGH) {
-            throw new \InvalidArgumentException('exportDirection has to be an OUT type (OUT/LOW/HIGH).');
+            throw new \InvalidArgumentException('exportDirection has to be an OUT type (OUT\LOW\HIGH).');
         }
 
         return new OutputPin($this->fileSystem, $number, $exportDirection);

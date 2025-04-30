@@ -2,12 +2,8 @@
 ini_set('display_errors', '1');
 echo 'Hello World!';
 echo '</br>';
-echo '</br>Loading config...';
 require_once 'config.php';      //Main settings
-echo '</br>' . $NUMBER_OF_DOORS;
-echo '</br>Loading pinconfig...';
 require_once 'pinconfig.php';   //Pin mapping
-echo '</br>Loading class GarageDoor...';
 require_once 'GarageDoor.php';  //Main Garage Door class
 
 // Initialize the doors

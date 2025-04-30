@@ -26,22 +26,25 @@ class GarageDoor
     private $Button;
     
     public function __construct($id, $name, $pin_Open_Sensor, $pin_Closed_Sensor,$pin_Button){
-        $this->gpio = new GPIO();
+        //$this->gpio = new GPIO();
         $this->id = $id;
         $this->name = $name;
         $this->pin_Open_Sensor = $pin_Open_Sensor;
         $this->pin_Closed_Sensor = $pin_Closed_Sensor;
         $this->pin_Button =$pin_Button;
         // Bind GPIO pins to objects
-        $this->OpenSensor = $this->gpio->getInputPin($this->pin_Open_Sensor);
+        /*$this->OpenSensor = $this->gpio->getInputPin($this->pin_Open_Sensor);
         $this->ClosedSensor = $this->gpio->getInputPin($this->pin_Closed_Sensor);
         $this->Button = $this->gpio->getOutputPin($this->pin_Button);
+        */
     }
 
     public function PushButton(){
+        /*
         $this->Button->setValue(PinInterface::VALUE_HIGH);
         sleep(0.5); // Wait for 1/2 second
         $this->Button->setValue(PinInterface::VALUE_LOW);
+        */
     }
 
     public function GetState(){

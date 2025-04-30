@@ -9,10 +9,10 @@
  * @author jbwil
  */
 
-use piPHP_GPIO/GPIO;
-use piPHP_GPIO/Pin/PinInterface;
-//require_once 'piPHP_GPIO/GPIO.php';
-//require_once 'piPHP_GPIO/Pin/PinInterface.php';
+//use piPHP_GPIO/GPIO;
+//use piPHP_GPIO/Pin/PinInterface;
+require_once 'piPHP_GPIO/GPIO.php';
+require_once 'piPHP_GPIO/Pin/PinInterface.php';
 
 class GarageDoor
 {

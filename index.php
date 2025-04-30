@@ -1,8 +1,9 @@
 <?php
 echo 'Hello World!';
-echo '</br>Loading Garage doors...';
+echo 'Loading Garage doors...';
 
 require_once 'config.php';      //Main settings
+echo '</br>'+$NUMBER_OF_DOORS;
 require_once 'pinconfig.php';   //Pin mapping
 require_once 'GarageDoor.php';  //Main Garage Door class
 

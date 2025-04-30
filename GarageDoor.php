@@ -9,8 +9,8 @@
  * @author jbwil
  */
 
-require_once dirname(__DIR__) . '/piPHP_GPIO/GPIO.php';
-require_once dirname(__DIR__) . '/piPHP_GPIO/Pin/PinInterface.php';
+require_once dirname( __FILE__ ) . '/piPHP_GPIO/GPIO.php';
+require_once dirname(__FILE__) . '/piPHP_GPIO/Pin/PinInterface.php';
 
 class GarageDoor
 {

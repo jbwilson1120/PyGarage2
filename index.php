@@ -2,9 +2,11 @@
 ini_set('display_errors', '1');
 echo 'Hello World!';
 echo '</br>';
-require_once 'config.php';      //Main settings
-require_once 'pinconfig.php';   //Pin mapping
-require_once 'GarageDoor.php';  //Main Garage Door class
+require_once dirname(__FILE__) . '/config.php';      //Main settings
+require_once dirname(__FILE__) . '/pinconfig.php';   //Pin mapping
+require_once dirname(__FILE__) . '/GarageDoor.php';  //Main Garage Door class
+require_once dirname(__FILE__) . '/piPHP_GPIO/GPIO.php';
+require_once dirname(__FILE__) . '/piPHP_GPIO/Pin/PinInterface.php';
 
 // Initialize the doors
 echo 'initializing garage doors...';

@@ -9,8 +9,6 @@
  * @author jbwil
  */
 
-require_once dirname( __FILE__ ) . '/piPHP_GPIO/GPIO.php';
-require_once dirname(__FILE__) . '/piPHP_GPIO/Pin/PinInterface.php';
 
 class GarageDoor
 {
@@ -28,8 +26,7 @@ class GarageDoor
     private $Button;
     
     public function __construct($id, $name, $pin_Open_Sensor, $pin_Closed_Sensor,$pin_Button){
-        $gpio = new GPIO();
-        $this->gpio = $gpio;
+        $this->gpio = new GPIO();
         $this->id = $id;
         $this->name = $name;
         $this->pin_Open_Sensor = $pin_Open_Sensor;

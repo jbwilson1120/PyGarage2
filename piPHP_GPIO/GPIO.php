@@ -9,7 +9,7 @@ use PiPHP\GPIO\Pin\Pin;
 use PiPHP\GPIO\Pin\InputPin;
 use PiPHP\GPIO\Pin\OutputPin;
 
-require_once 'GPIOInterface.php';
+require_once dirname(__FILE__) . '/GPIOInterface.php';
 final class GPIO implements GPIOInterface
 {
     private $fileSystem;

@@ -1,7 +1,8 @@
 <?php
 
 namespace PiPHP\GPIO\Pin;
-
+require_once dirname(__FILE__) . '/piPHP_GPIO/Pin/Pin.php';
+require_once dirname(__FILE__) . '/piPHP_GPIO/Pin/PinInterface.php';
 use PiPHP\GPIO\FileSystem\FileSystemInterface;
 
 abstract class Pin implements PinInterface

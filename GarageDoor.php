@@ -22,12 +22,13 @@ class GarageDoor
     public $pin_Button = 0;
 
     // GPIO Interface
-    private $gpio = new GPIO;
+    private $gpio;
     private $OpenSensor;
     private $ClosedSensor;
     private $Button;
     
     public function __construct($id, $name, $pin_Open_Sensor, $pin_Closed_Sensor,$pin_Button){
+        $this->gpio = new GPIO;
         $this->id = $id;
         $this->name = $name;
         $this->pin_Open_Sensor = $pin_Open_Sensor;

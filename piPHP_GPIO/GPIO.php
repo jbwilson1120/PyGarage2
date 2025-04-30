@@ -10,6 +10,12 @@ use PiPHP\GPIO\Pin\InputPin;
 use PiPHP\GPIO\Pin\OutputPin;
 
 require_once dirname(__FILE__) . '/GPIOInterface.php';
+require_once dirname(__FILE__) . '/FileSystem/FileSystemInterface.php';
+require_once dirname(__FILE__) . '/FileSystem/FileSystem.php';
+require_once dirname(__FILE__) . '/Interrupt/InterruptWatcher.php';
+require_once dirname(__FILE__) . '/Pin/Pin.php';
+require_once dirname(__FILE__) . '/Pin/InputPin.php';
+require_once dirname(__FILE__) . '/Pin/OutputPin.php';
 final class GPIO implements GPIOInterface
 {
     private $fileSystem;

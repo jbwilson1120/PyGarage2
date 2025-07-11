@@ -26,6 +26,6 @@ try {
 }
 
 echo '</br>';
-echo $door1->name . ': [STATUS TBD]';
+echo $door1->name . ': [' . $door1->GetState() . ']';
 echo '</br>';
-echo $door2->name . ': [STATUS TBD]';
+echo $door2->name . ': [' . $door2->GetState() . ']';

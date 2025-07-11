@@ -54,6 +54,5 @@ class GarageDoor
         } else {
             return 'Unknown';
         }
-        $this->state;
     }
 }

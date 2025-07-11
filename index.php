@@ -2,6 +2,8 @@
 ini_set('display_errors', '1');
 echo 'Hello World!';
 echo '</br>';
+echo 'current user: '.get_current_user();
+echo '</br>';
 require_once dirname(__FILE__) . '/config.php';      //Main settings
 require_once dirname(__FILE__) . '/pinconfig.php';   //Pin mapping
 require_once dirname(__FILE__) . '/GarageDoor.php';  //Main Garage Door class

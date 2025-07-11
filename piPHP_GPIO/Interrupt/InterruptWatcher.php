@@ -2,8 +2,8 @@
 
 namespace PiPHP\GPIO\Interrupt;
 
-require_once dirname(__FILE__) . '/piPHP_GPIO/Interrupt/InterruptWatcherInterface.php';
-require_once dirname(__FILE__) . '/piPHP_GPIO/Interrupt/InterruptWatcher.php';
+require_once dirname(__FILE__) . '/InterruptWatcherInterface.php';
+//require_once dirname(__FILE__) . '/InterruptWatcher.php';
 
 use PiPHP\GPIO\FileSystem\FileSystemInterface;
 use PiPHP\GPIO\Pin\InputPinInterface;

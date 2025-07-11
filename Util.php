@@ -20,14 +20,17 @@ class Util
     }
     public function HTMLFormatTrace($trace) {
         $o = '';
+        $o .= '<table><tr><th>File</th><th>Line</th><th>Class</th><th>Function</th></tr>';
         foreach ($trace as $t) {
-            $o .= '<b>File:</b> ' . $t['file'];
-            $o .= '<b>Line:</b> ' . $t['line'];
-            $o .= '<b>Class:</b> ' . $t['class'];
-            $o .= '<b>Function:</b> ' . $t['function'];
+            $o .= '<tr>';
+            $o .= '<td>' . $t['file'] . '</td>';
+            $o .= '<td>' . $t['line'] . '</td>';
+            $o .= '<td>' . $t['class'] . '</td>';
+            $o .= '<td>' . $t['function'] . '</td>';
             //$o .= '<b>Args:</b> ' . $t['args'];
-            $o .= '</br>';
+            $o .= '</tr>';
         }
+        $o .= '</table>';
         return $o;
     }
 

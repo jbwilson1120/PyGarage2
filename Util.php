@@ -21,7 +21,7 @@ class Util
     public function HTMLFormatTrace($trace) {
         $o = '';
         foreach ($trace as $t) {
-            $o .= '<b>File:</b> ' . $t['file'] . ' <b>Line:</b> ' . $t['line'] . ' <b>Class:</b> ' . $t['class'] . ' <b>Function:</b> ' . $t['function'];
+            $o .= '<b>File:</b> ' . $t['file'] . ' <b>Line:</b> ' . $t['line'] . ' <b>Class:</b> ' . $t['class'] . ' <b>Function:</b> ' . $t['function'] . '</br>';
         }
         return $o;
     }

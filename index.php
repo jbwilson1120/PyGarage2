@@ -21,6 +21,7 @@ try {
     $u = new Util();
 
     echo 'STACK TRACE: </br></br>' . $u->HTMLFormatTrace($e->getTrace());
+    phpinfo();
     exit;
 }
 

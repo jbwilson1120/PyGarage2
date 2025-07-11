@@ -12,8 +12,14 @@ require_once dirname(__FILE__) . '/piPHP_GPIO/Pin/PinInterface.php';
 
 // Initialize the doors
 echo 'initializing garage doors...';
-$door1 = new GarageDoor(1, 'Left Door', $DOOR1_OPEN_SENSOR, $DOOR1_CLOSED_SENSOR, $DOOR1_BUTTON);
-$door2 = new GarageDoor(2, 'Right Door', $DOOR2_OPEN_SENSOR, $DOOR2_CLOSED_SENSOR, $DOOR2_BUTTON);
+try {
+    $door1 = new GarageDoor(1, 'Left Door', $DOOR1_OPEN_SENSOR, $DOOR1_CLOSED_SENSOR, $DOOR1_BUTTON);
+    $door2 = new GarageDoor(2, 'Right Door', $DOOR2_OPEN_SENSOR, $DOOR2_CLOSED_SENSOR, $DOOR2_BUTTON);
+} catch (Exception $e) {
+    echo 'Oops! We had a problem initializing the garage doors: </br></br>' . $e->getMessage();
+    exit;
+}
+
 echo '</br>';
 echo $door1->name . ': [STATUS TBD]';
 echo '</br>';

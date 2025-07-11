@@ -15,7 +15,15 @@ class Util
         if (empty($Pin)) {
             return -1;
         }else{
-            if()
+            
         }
     }
+    public function HTMLFormatTrace($trace) {
+        $o = '';
+        foreach ($trace as $t) {
+            $o .= '<b>File:</b> ' . $t['file'] . ' <b>Line:</b> ' . $t['line'] . '<br>';
+        }
+        return $o;
+    }
+
 }

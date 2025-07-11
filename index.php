@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', '1');
-echo 'Hello World 2!';
+echo 'Hello World!';
 echo '</br>';
 require_once dirname(__FILE__) . '/config.php';      //Main settings
 require_once dirname(__FILE__) . '/pinconfig.php';   //Pin mapping

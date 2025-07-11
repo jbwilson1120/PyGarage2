@@ -1,7 +1,7 @@
 <?php
 
 namespace PiPHP\GPIO\FileSystem;
-require_once dirname(__DIR__) . '\FileSystemInterface.php';
+require_once dirname(__DIR__) . '/FileSystemInterface.php';
 use RuntimeException;
 
 final class FileSystem implements FileSystemInterface

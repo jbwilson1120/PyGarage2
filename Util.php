@@ -25,7 +25,7 @@ class Util
             $o .= '<b>Line:</b> ' . $t['line'];
             $o .= '<b>Class:</b> ' . $t['class'];
             $o .= '<b>Function:</b> ' . $t['function'];
-            $o .= '<b>Args:</b> ' . $t['args'];
+            //$o .= '<b>Args:</b> ' . $t['args'];
             $o .= '</br>';
         }
         return $o;

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html><head>
 <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<link href="/images/icon.png" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
+<link href="/static/images/icon.png" rel="shortcut icon">
 <title>Garage Status</title>
 
 <script>
@@ -25,7 +25,7 @@ function ShowEnterButton(num) {
 
 
 </head>
-<body bgcolor="#000000" style="background-image: url('/images/DoorsOfDurin1000.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center top;">
+<body bgcolor="#000000" style="background-image: url('/static/images/DoorsOfDurin1000.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center top;">
 <center>
 <br>
 
@@ -49,11 +49,11 @@ function ShowEnterButton(num) {
 
 <tr><td align=center style="display: {{ door1visable }};">
 <span style="display: {{ door1visable }};">
-<img src="/images/{{ door1status }}" width={{ doorstatussize }}% onclick="var y = document.getElementById('door1'); y.checked = true; document.forms['garageform'].submit();"><br><big><big class="doorname">{{ D1Name }}</big></big></span>
+<img src="/static/images/{{ door1status }}" width={{ doorstatussize }}% onclick="var y = document.getElementById('door1'); y.checked = true; document.forms['garageform'].submit();"><br><big><big class="doorname">{{ D1Name }}</big></big></span>
 
 </td><td align=center style="display: {{ door2visable }};">
 <span style="display: {{ door2visable }};">
-<img src="/images/{{ door2status }}" width={{ doorstatussize }}% onclick="var y = document.getElementById('door2'); y.checked = true; document.forms['garageform'].submit();"><br><big><big class="doorname">{{ D2Name }}</big></big></span>
+<img src="/static/images/{{ door2status }}" width={{ doorstatussize }}% onclick="var y = document.getElementById('door2'); y.checked = true; document.forms['garageform'].submit();"><br><big><big class="doorname">{{ D2Name }}</big></big></span>
 
 </tr></table>
 <br><br><a href="/Log" class="logfilelink">Click for Log File</a><br><br>

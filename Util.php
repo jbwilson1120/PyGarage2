@@ -36,13 +36,13 @@ class Util
     public function HTMLTemplate($template, $tags) {
         /**
          * $tags is an associative array of tags pairs to replace in the template. Tag pair should be in the format of
-         * (tagname, tagvalue) with both being strings. Tag names should be enclosed in curly braces, e.g. {tagname}.
+         * (tagname, tagvalue) with both being strings. Tag names should be enclosed in curly braces, e.g. {{ tagname }}.
          * 
          */
 
         $html = file_get_contents(require_once dirname(__FILE__) . '/templates/' . $template);
         foreach ($tags as $tag => $value) {
-            $html .= str_replace('{' . $tag . '}', $value, $template);
+            $html .= str_replace('{{ ' . $tag . ' }}', $value, $template);
         }
         return $html;
     }

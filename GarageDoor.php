@@ -55,4 +55,16 @@ class GarageDoor
             return 'Unknown';
         }
     }
+    public function GetStateImage()
+    {
+        $state = $this->GetState();
+        switch ($state) {
+            case 'Open':
+                return 'door_open.png';
+            case 'Closed':
+                return 'door_closed.png';
+            default:
+                return 'door_unknown.png';
+        }
+    }
 }

@@ -29,6 +29,8 @@ switch ($door) {
         $door2->PushButton(); // Open/close door2
         $response['doors'] = ['door' => $door2->name, 'status' => $door2->GetState()];
         break;
+    default:
+        $response['error'] = 'Invalid door specified - use \'door1\' or \'door2\'';
 }
 
 

@@ -1,11 +1,10 @@
 <?php
-ini_set('display_errors', '1');
-require_once dirname(__FILE__) . '/config.php';      //Main settings
-require_once dirname(__FILE__) . '/pinconfig.php';   //Pin mapping
-require_once dirname(__FILE__) . '/GarageDoor.php';  //Main Garage Door class
-require_once dirname(__FILE__) . '/Util.php';
-require_once dirname(__FILE__) . '/piPHP_GPIO/GPIO.php';
-require_once dirname(__FILE__) . '/piPHP_GPIO/Pin/PinInterface.php';
+/** Garage Door Status Page
+ * Displays the status of garage doors using GPIO pins
+ *
+ * @version 1.0
+ * @author jbwil
+ */
 
 // Initialize the doors
 require_once dirname(__FILE__) . '/InitDoors.php';

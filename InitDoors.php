@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', '1');
 require_once dirname(__FILE__) . '/config.php';      //Main settings
 require_once dirname(__FILE__) . '/pinconfig.php';   //Pin mapping
 require_once dirname(__FILE__) . '/GarageDoor.php';  //Main Garage Door class

@@ -48,9 +48,9 @@ class Util
          * 
          */
 
-        print ($tags);
-
-        $html = file_get_contents(require_once dirname(__FILE__) . '/templates/' . $template);
+        print($tags);
+        $template_path = dirname(__FILE__) . '/templates/' . $template;
+        $html = file_get_contents($template_path);
         foreach ($tags as $tag => $value) {
             $html = str_replace('{{ ' . $tag . ' }}', $value, $html);
         }

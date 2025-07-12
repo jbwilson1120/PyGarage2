@@ -18,8 +18,10 @@ $door = $_GET["door"];
 switch ($door) {
     case 'door1':
         $response['doors'] = ['door' => $door1->name, 'status' => $door1->GetState()];
+        break;
     case 'door2':
         $response['doors'] = ['door' => $door2->name, 'status' => $door2->GetState()];
+        break;
     default:
         $response['doors'] = [['door' => $door1->name, 'status' => $door1->GetState()], ['door' => $door2->name, 'status' => $door2->GetState()]];
 }

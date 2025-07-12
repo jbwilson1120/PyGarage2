@@ -60,11 +60,11 @@ class GarageDoor
         $state = $this->GetState();
         switch ($state) {
             case 'Open':
-                return 'door_open.png';
+                return 'GarageRed.gif';
             case 'Closed':
-                return 'door_closed.png';
+                return 'GarageGreen.gif';
             default:
-                return 'door_unknown.png';
+                return 'GarageQuestion.gif';
         }
     }
 }

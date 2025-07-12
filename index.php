@@ -12,11 +12,11 @@ require_once dirname(__FILE__) . '/InitDoors.php';
 $tags['doorstatussize'] = '50';
 
 $tags['D1Name'] = $door1->name;
-$tags['door1visable'] = 'inline';
+$tags['door1visable'] = 'block';
 $tags['door1status'] = $door1->GetStateImage();
 
 $tags['D2Name'] = $door2->name;
-$tags['door2visable'] = 'inline';
+$tags['door2visable'] = 'block';
 $tags['door2status'] = $door2->GetStateImage();
 
 $htmlbody = $u->HTMLTemplate("doorstatus.txt", $tags);

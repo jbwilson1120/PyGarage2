@@ -48,7 +48,6 @@ class Util
          * 
          */
 
-        print($tags);
         $template_path = dirname(__FILE__) . '/templates/' . $template;
         $html = file_get_contents($template_path);
         foreach ($tags as $tag => $value) {

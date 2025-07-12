@@ -14,11 +14,10 @@ require_once dirname(__FILE__) . '/InitDoors.php';
 $response = [];
 
 // Check the state of the target door and add it to the response
-try
-{
-    $door = $_GET["door"];
-} catch (Exception $e) {
-    // do nothing, we will return all doors
+if(isset($_GET['door'])) {
+    $door = $_GET['door'];
+} else {
+    $door = 'all'; // Default to all doors if no specific door is requested
 }
 
 switch ($door) {

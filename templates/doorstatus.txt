@@ -1,61 +1,59 @@
 <!DOCTYPE html>
-<html><head>
-<meta name="viewport" content="width=device-width">
-<link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
-<link href="/static/images/icon.png" rel="shortcut icon">
-<title>Garage Status</title>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
+		<link href="/static/images/icon.png" rel="shortcut icon">
+		<title>Garage Status</title>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("ShowHide");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-function ShowEnterButton(num) {
-  var x = document.getElementById("EnterButton");
-    x.style.display = "block";
-  var y = document.getElementById("door" + num);
-    y.checked = true;
-} 
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("ShowHide");
+			  if (x.style.display === "none") {
+				x.style.display = "block";
+			  } else {
+				x.style.display = "none";
+			  }
+			} 
+			function ShowEnterButton(num) {
+			  var x = document.getElementById("EnterButton");
+				x.style.display = "block";
+			  var y = document.getElementById("door" + num);
+				y.checked = true;
+			}
+		</script>
+	</head>
 
-</script>
 
+	<body bgcolor="#000000" style="background-image: url('/static/images/DoorsOfDurin1000.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center top;">
+		<center>
+		<br>
 
-</head>
-<body bgcolor="#000000" style="background-image: url('/static/images/DoorsOfDurin1000.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: center top;">
-<center>
-<br>
+		<button onclick="myFunction()">Speak Friend and Enter</button><br><br>
 
-<button onclick="myFunction()">Speak Friend and Enter</button><br><br>
+		<div id="ShowHide" style="display: none;">
+			<form action="/" method="post" id="garageform" autocomplete="off">
+				<input id="garagecode" name="garagecode" type="text" pattern="[0-9]*" value="" STYLE="background-color:white;"><br><br>
+				<div style="display:none;">
+				<span align=center style="display: {{ door1visable }};" onclick="ShowEnterButton(1)"><input type="radio" id="door1" name="garagedoorradio" value="door1" onclick="ShowEnterButton(1)"><big><big> {{ D1Name }} </big></big></span>
+				<span align=center style="display: {{ door2visable }};" onclick="ShowEnterButton(2)">&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="door2" name="garagedoorradio" value="door2" onclick="ShowEnterButton(2)"><big><big> {{ D2Name }} </big></big></span>
+				</div>
+				<br><br>
+				<input type="text" id="No_Refresh" name="No_Refresh" value="{{ Refresher }}" style="display: none;">
+				<button id="EnterButton" style="display: none;" onclick="document.forms['garageform'].submit();">Click Picture Below to Activate Doors</button>
+			</form>
+		</div> 
+		<br>
 
-<div id="ShowHide" style="display: none;">
-	<form action="/" method="post" id="garageform" autocomplete="off">
-	<input id="garagecode" name="garagecode" type="text" pattern="[0-9]*" value="" STYLE="background-color:white;"><br><br>
-<div style="display:none;">
-<span align=center style="display: {{ door1visable }};" onclick="ShowEnterButton(1)"><input type="radio" id="door1" name="garagedoorradio" value="door1" onclick="ShowEnterButton(1)"><big><big> {{ D1Name }} </big></big></span>
-<span align=center style="display: {{ door2visable }};" onclick="ShowEnterButton(2)">&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="door2" name="garagedoorradio" value="door2" onclick="ShowEnterButton(2)"><big><big> {{ D2Name }} </big></big></span>
-</div>
-	<br><br>
-	<input type="text" id="No_Refresh" name="No_Refresh" value="{{ Refresher }}" style="display: none;">
-	<button id="EnterButton" style="display: none;" onclick="document.forms['garageform'].submit();">Click Picture Below to Activate Doors</button>
-	</form>
-</div> 
-<br>
-
-<table>
-
-<tr><td align=center style="display: {{ door1visable }};">
-<span style="display: {{ door1visable }};">
-<img src="/static/images/{{ door1status }}" width={{ doorstatussize }}% onclick="var y = document.getElementById('door1'); y.checked = true; document.forms['garageform'].submit();"><br><big><big class="doorname">{{ D1Name }}</big></big></span>
-
-</td><td align=center style="display: {{ door2visable }};">
-<span style="display: {{ door2visable }};">
-<img src="/static/images/{{ door2status }}" width={{ doorstatussize }}% onclick="var y = document.getElementById('door2'); y.checked = true; document.forms['garageform'].submit();"><br><big><big class="doorname">{{ D2Name }}</big></big></span>
-
-</tr></table>
-<br><br><a href="/Log" class="logfilelink">Click for Log File</a><br><br>
-</center>
-</body></html>
+		<table>
+			<tr>
+				<td align=center style="display: {{ door1visable }};"><span style="display: {{ door1visable }};"><img src="/static/images/{{ door1status }}" width={{ doorstatussize }}% onclick="var y = document.getElementById('door1'); y.checked = true; document.forms['garageform'].submit();"><br><big><big class="doorname">{{ D1Name }}</big></big></span></td>
+				<td align=center style="display: {{ door2visable }};"><span style="display: {{ door2visable }};"><img src="/static/images/{{ door2status }}" width={{ doorstatussize }}% onclick="var y = document.getElementById('door2'); y.checked = true; document.forms['garageform'].submit();"><br><big><big class="doorname">{{ D2Name }}</big></big></span></td>
+			</tr>
+		</table>
+		<br><br>
+		<a href="/Log" class="logfilelink">Click for Log File</a>
+		<br><br>
+		</center>
+	</body>
+</html>

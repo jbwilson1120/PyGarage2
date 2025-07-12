@@ -14,7 +14,13 @@ require_once dirname(__FILE__) . '/InitDoors.php';
 $response = [];
 
 // Check the state of the target door and add it to the response
-$door = $_GET["door"];
+try
+{
+    $door = $_GET["door"];
+} catch (Exception $e) {
+    // do nothing, we will return all doors
+}
+
 switch ($door) {
     case 'door1':
         $response['doors'] = ['door' => $door1->name, 'status' => $door1->GetState()];

@@ -11,7 +11,7 @@
 require_once dirname(__FILE__) . '/InitDoors.php';
 
 $door = $_GET["door"];
-switch ($value) {
+switch ($door) {
     case 'door1':
         $targetdoor = $door1;
     case 'door2':

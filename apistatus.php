@@ -13,6 +13,7 @@ require_once dirname(__FILE__) . '/InitDoors.php';
 // Initialize the response array
 $response = [];
 
+// Check the state of the target door and add it to the response
 $door = $_GET["door"];
 switch ($door) {
     case 'door1':
@@ -27,7 +28,5 @@ switch ($door) {
 // Set the content type to JSON
 header('Content-Type: application/json');
 
-// Check the state of the target door and add it to the response
-$response['doors'] = ['status' => $targetdoor->GetState()];
 // return the response as JSON
 echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
